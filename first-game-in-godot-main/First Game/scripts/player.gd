@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var corpse_counter = 0
 var is_sacrifice = false
+var spawnpoint = Vector2(self.position.x, self.position.y)
+
 
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -53,12 +55,23 @@ func _physics_process(delta):
 func create_duplicate_sprite():
 	if not is_sacrifice:
 		return
+	var corpse = Area2D.new()
 	var new_sprite = animated_sprite.duplicate()
+	var collision_shape = CollisionShape2D.new()
+	var rect = RectangleShape2D.new()
+	rect.size = Vector2(15, 8)
+	collision_shape.shape = rect
+	corpse.add_child(collision_shape)
+	corpse.add_child(new_sprite)
+	
+	
 	is_sacrifice = false
 	corpse_counter += 1
-	add_sibling(new_sprite)
-	new_sprite.position = Vector2(self.position.x, self.position.y + animated_sprite.position.y)
-	new_sprite.name = "corpse" + str(corpse_counter)
+	add_sibling(corpse)
+	corpse.position = Vector2(self.position.x, self.position.y)
+	corpse.name = "corpse" + str(corpse_counter)
+	self.position = spawnpoint
+	self.velocity = Vector2(0,0)
 	
 func process_sacrifice():
 	if Input.is_action_just_pressed("sacrifice"):
