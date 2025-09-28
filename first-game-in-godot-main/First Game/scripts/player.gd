@@ -11,7 +11,7 @@ var is_sacrifice = false
 var spawnpoint = Vector2(self.position.x, self.position.y)
 
 
-
+@onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
@@ -59,7 +59,7 @@ func create_duplicate_sprite():
 	var new_sprite = animated_sprite.duplicate()
 	var collision_shape = CollisionShape2D.new()
 	var rect = RectangleShape2D.new()
-	rect.size = Vector2(11,6)
+	rect.size = Vector2(11,5)
 	collision_shape.position = Vector2(3,0)
 	collision_shape.shape = rect
 	corpse.add_child(collision_shape)
@@ -71,8 +71,10 @@ func create_duplicate_sprite():
 	add_sibling(corpse)
 	corpse.position = Vector2(self.position.x, self.position.y)
 	corpse.name = "corpse" + str(corpse_counter)
+	game_manager.add_corpse_count()
 	self.position = spawnpoint
 	self.velocity = Vector2(0,0)
+	
 	
 func process_sacrifice():
 	if Input.is_action_just_pressed("sacrifice"):
