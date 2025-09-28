@@ -60,7 +60,7 @@ func create_duplicate_sprite():
 	var collision_shape = CollisionShape2D.new()
 	var rect = RectangleShape2D.new()
 	rect.size = Vector2(11,6)
-	collision_shape.position = Vector2(3,-2)
+	collision_shape.position = Vector2(3,0)
 	collision_shape.shape = rect
 	corpse.add_child(collision_shape)
 	corpse.add_child(new_sprite)
