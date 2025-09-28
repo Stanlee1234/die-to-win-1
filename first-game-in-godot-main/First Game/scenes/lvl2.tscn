@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/player.tscn" id="4_kpy5e"]
 [ext_resource type="PackedScene" uid="uid://dtrbka1ef726o" path="res://scenes/killzone.tscn" id="5_8yxcp"]
 [ext_resource type="PackedScene" uid="uid://pqp5qaw561fr" path="res://scenes/coin.tscn" id="6_ldvkq"]
-[ext_resource type="PackedScene" uid="uid://bgv5v2fxqlswe" path="res://scenes/platform.tscn" id="7_3jqp1"]
+[ext_resource type="PackedScene" uid="uid://4uxehdu2jvoc" path="res://scenes/ice_platform.tscn" id="7_c8sub"]
 [ext_resource type="PackedScene" uid="uid://d2w2i5h0lhc6l" path="res://scenes/slime.tscn" id="8_wxq22"]
 [ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="9_86tbu"]
 [ext_resource type="PackedScene" uid="uid://ch6rewi4go7sn" path="res://scenes/robot.tscn" id="10_y266n"]
@@ -297,13 +297,13 @@ position = Vector2(700, -184)
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="Platforms" instance=ExtResource("7_3jqp1")]
+[node name="Ice Platform" parent="Platforms" instance=ExtResource("7_c8sub")]
 position = Vector2(32, 9)
 
-[node name="Platform2" parent="Platforms" instance=ExtResource("7_3jqp1")]
+[node name="Ice Platform2" parent="Platforms" instance=ExtResource("7_c8sub")]
 position = Vector2(370, 52)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Ice Platform2"]
 libraries = {
 &"": SubResource("AnimationLibrary_xuk5v")
 }
