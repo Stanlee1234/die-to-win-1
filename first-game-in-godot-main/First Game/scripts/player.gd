@@ -59,7 +59,7 @@ func create_duplicate_sprite():
 	var new_sprite = animated_sprite.duplicate()
 	var collision_shape = CollisionShape2D.new()
 	var rect = RectangleShape2D.new()
-	rect.size = Vector2(15, 8)
+	rect.size = Vector2(100,100)
 	collision_shape.shape = rect
 	corpse.add_child(collision_shape)
 	corpse.add_child(new_sprite)
