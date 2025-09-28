@@ -55,11 +55,12 @@ func _physics_process(delta):
 func create_duplicate_sprite():
 	if not is_sacrifice:
 		return
-	var corpse = Area2D.new()
+	var corpse = StaticBody2D.new()
 	var new_sprite = animated_sprite.duplicate()
 	var collision_shape = CollisionShape2D.new()
 	var rect = RectangleShape2D.new()
-	rect.size = Vector2(100,100)
+	rect.size = Vector2(11,6)
+	collision_shape.position = Vector2(3,-2)
 	collision_shape.shape = rect
 	corpse.add_child(collision_shape)
 	corpse.add_child(new_sprite)
