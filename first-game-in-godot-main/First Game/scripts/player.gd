@@ -14,6 +14,8 @@ var is_sacrifice = false
 
 func _physics_process(delta):
 	# Add the gravity.
+	if is_sacrifice:
+		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -31,14 +33,13 @@ func _physics_process(delta):
 		animated_sprite.flip_h = true
 	
 	# Play animations
-	if not is_sacrifice:
-		if is_on_floor() :
-			if direction == 0:
-				animated_sprite.play("idle")
-			else:
-				animated_sprite.play("run")
+	if is_on_floor() :
+		if direction == 0:
+			animated_sprite.play("idle")
 		else:
-			animated_sprite.play("jump")
+			animated_sprite.play("run")
+	else:
+		animated_sprite.play("jump")
 	
 	# Apply movement
 	if direction:
@@ -56,7 +57,7 @@ func create_duplicate_sprite():
 	is_sacrifice = false
 	corpse_counter += 1
 	add_sibling(new_sprite)
-	new_sprite.position = Vector2(self.position.x, self.position.y - 6)
+	new_sprite.position = Vector2(self.position.x, self.position.y + animated_sprite.position.y)
 	new_sprite.name = "corpse" + str(corpse_counter)
 	
 func process_sacrifice():
