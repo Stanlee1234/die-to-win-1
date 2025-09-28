@@ -10,7 +10,7 @@ var corpse_counter = 0
 var is_sacrifice = false
 var spawnpoint = Vector2(self.position.x, self.position.y)
 
-
+@onready var timer = $Timer
 @onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -24,7 +24,9 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	if Input.is_action_just_pressed("reset"):
+		Engine.time_scale = 1.0
+		get_tree().reload_current_scene()
 	# Get the input direction: -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 	
