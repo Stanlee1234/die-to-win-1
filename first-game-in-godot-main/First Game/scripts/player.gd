@@ -13,6 +13,7 @@ var spawnpoint = Vector2(self.position.x, self.position.y)
 @onready var timer = $Timer
 @onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var animation = $AnimationPlayer
 
 func _physics_process(delta):
 	# Add the gravity.
