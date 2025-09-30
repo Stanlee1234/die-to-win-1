@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 
 const SPEED = 90.0
@@ -73,7 +74,7 @@ func create_duplicate_sprite():
 	corpse_counter += 1
 	add_sibling(corpse)
 	corpse.position = Vector2(self.position.x, self.position.y)
-	corpse.name = "corpse" + str(corpse_counter)
+	corpse.name = "corpse" + str(corpse_counter)	
 	game_manager.add_corpse_count()
 	self.position = spawnpoint
 	self.velocity = Vector2(0,0)
@@ -84,3 +85,6 @@ func process_sacrifice():
 		animated_sprite.animation_finished.connect(create_duplicate_sprite)
 		is_sacrifice = true
 		animated_sprite.play("sacrifice")
+		
+func _on_body_entered(body: Node2D):
+	print(body.name)

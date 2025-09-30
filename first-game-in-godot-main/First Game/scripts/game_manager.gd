@@ -4,6 +4,13 @@ extends Node
 var coins = 0
 var corpse = 0
 var hud = HUD
+var current_area = 1
+var area_path = "res://Area/"
+
+func next_level():
+	current_area += 1
+	var full_path = area_path + "area_" + str(current_area) + ".tscn"
+	get_tree().change_scene_to_file(full_path)
 
 func _ready():
 	hud = get_tree().get_first_node_in_group("hud")
