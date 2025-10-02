@@ -23,6 +23,10 @@ Music="*res://scenes/music.tscn"
 
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [input]
 
 jump={
@@ -56,6 +60,7 @@ reset={
 
 [layer_names]
 
+2d_render/layer_4="Lighting"
 2d_physics/layer_17="transitions"
 
 [rendering]

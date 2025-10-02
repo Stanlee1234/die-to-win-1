@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bj6wrwst36vle"]
 
-[ext_resource type="Script" uid="uid://bcwtfwcw83i7y" path="res://scenes/flag.gd" id="1_32e5v"]
+[ext_resource type="Script" uid="uid://bcwtfwcw83i7y" path="res://scripts/flag.gd" id="1_32e5v"]
 [ext_resource type="Texture2D" uid="uid://cg5p8owq8lxrs" path="res://assets/sprites/flag animation.png" id="1_76ss4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q38m2"]
