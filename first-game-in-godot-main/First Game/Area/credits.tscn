@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5brt76jbnc7x"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_byhny"]
+[ext_resource type="Script" uid="uid://di6stob0v5o45" path="res://scripts/button.gd" id="2_8j1dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8j1dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65ybm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8enko"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Creators" type="Label" parent="."]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 1152.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("1_byhny")
+theme_override_font_sizes/font_size = 32
+text = "All work done by: Stanley Lu (IceVeryChill)
+
+
+
+A few assets were borrowed from Itch
+
+
+
+If you clicked on this page, your cool.
+
+
+
+Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 264.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("1_byhny")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8j1dm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_65ybm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8enko")
+text = "Exit"
+script = ExtResource("2_8j1dm")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

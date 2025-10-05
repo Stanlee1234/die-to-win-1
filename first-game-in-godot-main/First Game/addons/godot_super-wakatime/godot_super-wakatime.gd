@@ -1,7 +1,13 @@
 @tool
 extends EditorPlugin
 
+# put this in your ~/.wakatime.cfg file
 
+var api_url = "https://hackatime.hackclub.com/api/hackatime/v1"
+var api_key = "0a0159fb-6ff2-499b-83a3-696acf95701d"
+var heartbeat_rate_limit_seconds = 30
+
+# any other wakatime configs you want to add: https://github.com/wakatime/wakatime-cli/blob/develop/USAGE.md#ini-config-file
 #------------------------------- SETUP -------------------------------
 # Utilities
 var Utils = preload("res://addons/godot_super-wakatime/utils.gd").new()

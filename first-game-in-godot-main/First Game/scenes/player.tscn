@@ -1,8 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://dqnaqj8yb6hwd"]
+[gd_scene load_steps=16 format=3 uid="uid://dqnaqj8yb6hwd"]
 
 [ext_resource type="Script" uid="uid://dhojb01i6t155" path="res://scripts/player.gd" id="1_ofpvf"]
 [ext_resource type="Texture2D" uid="uid://cqo1okl1hbcua" path="res://assets/sprites/prototype_character.png" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://bkn80rnknirpp" path="res://scenes/hud.tscn" id="3_qhqgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bvcm0"]
+radius = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -97,32 +100,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bvcm0"]
-radius = 5.0
-
-[sub_resource type="Gradient" id="Gradient_qhqgy"]
-offsets = PackedFloat32Array(0.34573644, 0.7239583)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dqkch"]
-gradient = SubResource("Gradient_qhqgy")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0, 0)
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 2
 script = ExtResource("1_ofpvf")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 8
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_bvcm0")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+clip_children = 2
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"jump"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("CircleShape2D_bvcm0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -134,9 +126,3 @@ zoom = Vector2(4, 4)
 limit_bottom = 120
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-light_mask = 1048575
-z_index = 15
-texture = SubResource("GradientTexture2D_dqkch")
-texture_scale = 3.0

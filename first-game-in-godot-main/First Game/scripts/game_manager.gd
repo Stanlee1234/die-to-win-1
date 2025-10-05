@@ -13,6 +13,7 @@ func next_level():
 	get_tree().change_scene_to_file(full_path)
 
 func _ready():
+	AudioPlayer.play_music_level()
 	hud = get_tree().get_first_node_in_group("hud")
 
 func add_coin():

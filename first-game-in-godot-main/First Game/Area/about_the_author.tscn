@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bufh24lsnufr7"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_sysue"]
+[ext_resource type="Script" uid="uid://di6stob0v5o45" path="res://scripts/button.gd" id="2_pdyat"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5ev2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oskpm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gknp8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 264.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("1_sysue")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h5ev2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_oskpm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gknp8")
+text = "Exit"
+script = ExtResource("2_pdyat")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 144.0
+offset_right = 1072.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("1_sysue")
+theme_override_font_sizes/font_size = 30
+text = "Stanley Lu is a 8th grader who lives in Bothell, Washington. He likes Swimming, Baskeball, Minecraft, Fortnite, Hollow Knight (First and Silksong!), and also many other games. He is highly skilled in coding, though this is his first ever Godot game. He has spent well over 20 hours working on this project, and miraculously won the Daydream Seattle. Thank you for playing Die to Win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0c5mbfu2o403"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_pbuc1"]
+[ext_resource type="Script" uid="uid://bsv03wa8uvuh5" path="res://scripts/start_button.gd" id="1_qx52l"]
+[ext_resource type="Script" uid="uid://l4bosgm4gvsc" path="res://scripts/credits_button.gd" id="3_t8hic"]
+[ext_resource type="Texture2D" uid="uid://dlesbwpnhtrh7" path="res://assets/sprites/Gemini_Generated_Image_eafcd4eafcd4eafc-removebg-preview.png" id="4_1kmg2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiw2g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq5f4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqarf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8hic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kmg2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7t8c"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_pbuc1"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+offset_left = -592.0
+offset_top = -336.0
+offset_right = 560.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 608.0
+offset_right = 1318.0
+offset_bottom = 752.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6872148, 0.68721485, 0.68721586, 1)
+theme_override_fonts/font = ExtResource("1_pbuc1")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tiw2g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kq5f4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uqarf")
+text = "Start"
+script = ExtResource("1_qx52l")
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 712.0
+offset_right = 1368.0
+offset_bottom = 848.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.8748867, 0.8781841, 0.90369344, 1)
+theme_override_fonts/font = ExtResource("1_pbuc1")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t8hic")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1kmg2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k7t8c")
+button_group = SubResource("ButtonGroup_pbuc1")
+text = "Credits"
+script = ExtResource("3_t8hic")
+
+[node name="AboutTheAuthor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 808.0
+offset_right = 1632.0
+offset_bottom = 952.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6872148, 0.68721485, 0.68721586, 1)
+theme_override_fonts/font = ExtResource("1_pbuc1")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tiw2g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kq5f4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uqarf")
+text = "About the Author"
+script = ExtResource("1_qx52l")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1336.0
+offset_top = 208.0
+offset_right = 1836.0
+offset_bottom = 776.0
+texture = ExtResource("4_1kmg2")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_pressed"]
+[connection signal="pressed" from="AboutTheAuthor" to="AboutTheAuthor" method="_on_pressed"]

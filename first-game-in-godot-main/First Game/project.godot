@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="First Game"
-run/main_scene="res://Area/level_1.tscn"
+run/main_scene="uid://b0c5mbfu2o403"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/layer_17=""
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
+AudioPlayer="*res://scenes/audio_player.tscn"
 
 [display]
 
