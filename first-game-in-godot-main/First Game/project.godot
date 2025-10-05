@@ -17,7 +17,6 @@ run/layer_17=""
 
 [autoload]
 
-Music="*res://scenes/music.tscn"
 AudioPlayer="*res://scenes/audio_player.tscn"
 
 [display]
