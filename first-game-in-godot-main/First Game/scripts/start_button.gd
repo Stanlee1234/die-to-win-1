@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Area/about_the_author.tscn")
+	get_tree().change_scene_to_file("res://Area/level_1.tscn")
