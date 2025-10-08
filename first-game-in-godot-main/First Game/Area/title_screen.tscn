@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0c5mbfu2o403"]
+[gd_scene load_steps=13 format=3 uid="uid://b0c5mbfu2o403"]
 
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_pbuc1"]
 [ext_resource type="Script" uid="uid://bsv03wa8uvuh5" path="res://scripts/start_button.gd" id="1_qx52l"]
 [ext_resource type="Script" uid="uid://l4bosgm4gvsc" path="res://scripts/credits_button.gd" id="3_t8hic"]
 [ext_resource type="Texture2D" uid="uid://dlesbwpnhtrh7" path="res://assets/sprites/Gemini_Generated_Image_eafcd4eafcd4eafc-removebg-preview.png" id="4_1kmg2"]
 [ext_resource type="Script" uid="uid://doyf3uh1buj3l" path="res://scripts/about_the_author.gd" id="5_k7t8c"]
-[ext_resource type="Texture2D" uid="uid://cn8jsooq3jnns" path="res://assets/sprites/background.png" id="6_tiw2g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiw2g"]
 
@@ -31,21 +30,11 @@ offset_bottom = 312.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 0
-offset_left = 592.0
-offset_top = 336.0
-offset_right = 1744.0
-offset_bottom = 968.0
-texture = ExtResource("6_tiw2g")
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 744.0
-offset_top = 80.0
-offset_right = 1648.0
-offset_bottom = 992.0
+offset_left = 704.0
+offset_right = 1608.0
+offset_bottom = 912.0
 texture = ExtResource("4_1kmg2")
 stretch_mode = 5
 
