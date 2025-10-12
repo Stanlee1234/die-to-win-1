@@ -91,3 +91,4 @@ func _on_body_entered(body: Node2D):
 func reset_position():
 	self.position = spawnpoint
 	self.velocity = Vector2(0,0)
+	

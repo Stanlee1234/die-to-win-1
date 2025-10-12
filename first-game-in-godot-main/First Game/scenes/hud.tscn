@@ -86,7 +86,7 @@ offset_right = 168.0
 offset_bottom = 52.0
 text = "x 0"
 label_settings = SubResource("LabelSettings_8sq4i")
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="CorpseTexture" type="TextureRect" parent="."]
@@ -101,7 +101,8 @@ stretch_mode = 4
 [node name="CorpseCountLabel" type="Label" parent="CorpseTexture" groups=["hud"]]
 layout_mode = 0
 offset_left = 68.0
-offset_right = 148.0
+offset_right = 170.0
 offset_bottom = 32.0
 text = "x 0"
 label_settings = SubResource("LabelSettings_640wx")
+horizontal_alignment = 2

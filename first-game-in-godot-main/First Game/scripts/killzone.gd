@@ -10,10 +10,11 @@ func _on_body_entered(body):
 		player = body
 		if GameManager.health > 1:
 			GameManager.take_damage(player)
+			animation.play("DeathSound")
 		else:
+			player.get_node("CollisionShape2D").queue_free()
 			timer.start()
-			animation.play("PlayDeath")
-
+			animation.play("DeathSound")
 
 func _on_timer_timeout():
 	Engine.time_scale = 1.0

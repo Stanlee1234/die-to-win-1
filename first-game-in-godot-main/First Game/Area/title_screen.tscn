@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0c5mbfu2o403"]
+[gd_scene load_steps=14 format=3 uid="uid://b0c5mbfu2o403"]
 
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_pbuc1"]
 [ext_resource type="Script" uid="uid://bsv03wa8uvuh5" path="res://scripts/start_button.gd" id="1_qx52l"]
 [ext_resource type="Texture2D" uid="uid://dwg3vqpbwnmji" path="res://assets/sprites/bkgcolor.png" id="1_tiw2g"]
 [ext_resource type="Texture2D" uid="uid://bvqhicci7fdhb" path="res://assets/sprites/Untitled design (2).png" id="2_kq5f4"]
 [ext_resource type="Script" uid="uid://l4bosgm4gvsc" path="res://scripts/credits_button.gd" id="3_t8hic"]
+[ext_resource type="Script" uid="uid://ctgwox680dcmv" path="res://Area/instructions.gd" id="6_tiw2g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiw2g"]
 
@@ -94,7 +95,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_1kmg2")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_k7t8c")
 button_group = SubResource("ButtonGroup_pbuc1")
 text = "Instructions"
-script = ExtResource("3_t8hic")
+script = ExtResource("6_tiw2g")
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
 [connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_pressed"]
