@@ -2,7 +2,7 @@ extends Node
 
 var coins = 0
 var corpse = 0
-var current_area = 3
+var current_area = 1
 var health = 3
 var area_path = "res://Area/"
 var totalcorpse = 0
