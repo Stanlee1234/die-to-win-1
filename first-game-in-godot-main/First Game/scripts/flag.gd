@@ -11,4 +11,4 @@ func _on_body_entered(body: Node2D) -> void:
 		level += 1
 		var path = "res://Area/level_" + str(level) + ".tscn"
 		get_tree().change_scene_to_file(path)
-		print("change level")
+		print("change level to level" + str(level) )
