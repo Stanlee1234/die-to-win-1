@@ -33,6 +33,7 @@ func take_damage():
 	if health > 1:
 		health -= 1
 		player.reset_position()
+		hud.did_take_damage()
 	else:
 		get_tree().reload_current_scene()
 		player.get_node("CollisionShape2D").queue_free()

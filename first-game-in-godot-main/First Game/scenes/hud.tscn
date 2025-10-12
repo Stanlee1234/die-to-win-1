@@ -58,11 +58,10 @@ script = ExtResource("1_640wx")
 coin_label = NodePath("CoinTexture/CoinLabel")
 corpse_count_label = NodePath("CorpseTexture/CorpseCountLabel")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="HeartLabel" type="AnimatedSprite2D" parent="."]
 position = Vector2(77, 136.00002)
 scale = Vector2(2.78, 2.78)
 sprite_frames = SubResource("SpriteFrames_0i1j5")
-autoplay = "default"
 frame_progress = 0.8169223
 
 [node name="CoinTexture" type="TextureRect" parent="."]
