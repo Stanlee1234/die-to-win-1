@@ -1,13 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5brt76jbnc7x"]
+[gd_scene load_steps=11 format=3 uid="uid://c5brt76jbnc7x"]
 
+[ext_resource type="Texture2D" uid="uid://dwg3vqpbwnmji" path="res://assets/sprites/bkgcolor.png" id="1_8enko"]
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_byhny"]
 [ext_resource type="Script" uid="uid://di6stob0v5o45" path="res://scripts/button.gd" id="2_8j1dm"]
+[ext_resource type="Script" uid="uid://doyf3uh1buj3l" path="res://scripts/about_the_author.gd" id="3_65ybm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8j1dm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xpikj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65ybm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6nyb3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3e8d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8enko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yi85c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxcna"]
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -16,6 +24,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Bkg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 6000.0
+offset_bottom = 3375.0
+texture = ExtResource("1_8enko")
 
 [node name="Creators" type="Label" parent="."]
 layout_mode = 0
@@ -41,18 +55,37 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="AboutTheAuthor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = -11.0
+offset_right = 1320.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6872148, 0.68721485, 0.68721586, 1)
+theme_override_fonts/font = ExtResource("1_byhny")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xpikj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6nyb3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3e8d")
+text = "About the Author"
+script = ExtResource("3_65ybm")
+
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 264.0
 offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6862745, 0.6862745, 0.6862745, 1)
 theme_override_fonts/font = ExtResource("1_byhny")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8j1dm")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_65ybm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8enko")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8enko")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yi85c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hxcna")
 text = "Exit"
 script = ExtResource("2_8j1dm")
 
+[connection signal="pressed" from="AboutTheAuthor" to="AboutTheAuthor" method="_on_pressed"]
 [connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

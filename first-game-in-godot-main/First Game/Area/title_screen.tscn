@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0c5mbfu2o403"]
+[gd_scene load_steps=13 format=3 uid="uid://b0c5mbfu2o403"]
 
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_pbuc1"]
 [ext_resource type="Script" uid="uid://bsv03wa8uvuh5" path="res://scripts/start_button.gd" id="1_qx52l"]
-[ext_resource type="Texture2D" uid="uid://drpx5hesiuo43" path="res://assets/sprites/Screenshot 2025-10-11 at 14.36.49.png" id="1_tiw2g"]
+[ext_resource type="Texture2D" uid="uid://dwg3vqpbwnmji" path="res://assets/sprites/bkgcolor.png" id="1_tiw2g"]
 [ext_resource type="Texture2D" uid="uid://bvqhicci7fdhb" path="res://assets/sprites/Untitled design (2).png" id="2_kq5f4"]
 [ext_resource type="Script" uid="uid://l4bosgm4gvsc" path="res://scripts/credits_button.gd" id="3_t8hic"]
-[ext_resource type="Script" uid="uid://doyf3uh1buj3l" path="res://scripts/about_the_author.gd" id="5_k7t8c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiw2g"]
 
@@ -80,22 +79,23 @@ button_group = SubResource("ButtonGroup_pbuc1")
 text = "Credits"
 script = ExtResource("3_t8hic")
 
-[node name="AboutTheAuthor" type="Button" parent="."]
+[node name="InstructionsButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 696.0
-offset_top = 808.0
-offset_right = 1632.0
-offset_bottom = 952.0
+offset_left = 784.0
+offset_top = 800.0
+offset_right = 1504.0
+offset_bottom = 936.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.6872148, 0.68721485, 0.68721586, 1)
+theme_override_colors/font_hover_color = Color(0.8748867, 0.8781841, 0.90369344, 1)
 theme_override_fonts/font = ExtResource("1_pbuc1")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxEmpty_tiw2g")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_kq5f4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_uqarf")
-text = "About the Author"
-script = ExtResource("5_k7t8c")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t8hic")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1kmg2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k7t8c")
+button_group = SubResource("ButtonGroup_pbuc1")
+text = "Instructions"
+script = ExtResource("3_t8hic")
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
 [connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_pressed"]
-[connection signal="pressed" from="AboutTheAuthor" to="AboutTheAuthor" method="_on_pressed"]
+[connection signal="pressed" from="InstructionsButton" to="InstructionsButton" method="_on_pressed"]

@@ -1,3 +1,4 @@
+#Hey... Wait a minute! Your not supposed to be here!!! GET OUT
 extends CharacterBody2D
 class_name Player
 

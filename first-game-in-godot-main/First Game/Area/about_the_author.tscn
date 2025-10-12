@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bufh24lsnufr7"]
+[gd_scene load_steps=7 format=3 uid="uid://bufh24lsnufr7"]
 
+[ext_resource type="Texture2D" uid="uid://dwg3vqpbwnmji" path="res://assets/sprites/bkgcolor.png" id="1_pdyat"]
 [ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_sysue"]
 [ext_resource type="Script" uid="uid://di6stob0v5o45" path="res://scripts/button.gd" id="2_pdyat"]
 
@@ -17,12 +18,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Bkg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 6000.0
+offset_bottom = 3375.0
+texture = ExtResource("1_pdyat")
+
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 264.0
 offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6862745, 0.6862745, 0.6862745, 1)
 theme_override_fonts/font = ExtResource("1_sysue")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_h5ev2")

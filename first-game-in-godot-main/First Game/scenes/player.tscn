@@ -119,6 +119,9 @@ animation = &"jump"
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("3_qhqgy")]
 
+[node name="HUD" parent="CanvasLayer/HUD" instance=ExtResource("3_qhqgy")]
+layout_mode = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -7)
 zoom = Vector2(4, 4)

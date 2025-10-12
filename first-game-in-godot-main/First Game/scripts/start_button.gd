@@ -1,5 +1,4 @@
 extends Control
 
-
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Area/level_1.tscn")
+	LoadManager.load_scene("res://Area/level_1.tscn")

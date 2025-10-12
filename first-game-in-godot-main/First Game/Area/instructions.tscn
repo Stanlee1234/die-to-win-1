@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce2h0ithu0sc4"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_cumwy"]
+[ext_resource type="Texture2D" uid="uid://dwg3vqpbwnmji" path="res://assets/sprites/bkgcolor.png" id="1_egcxk"]
+[ext_resource type="Script" uid="uid://di6stob0v5o45" path="res://scripts/button.gd" id="2_egcxk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_egcxk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kjkcy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jim11"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bkg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 6000.0
+offset_bottom = 3375.0
+texture = ExtResource("1_egcxk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 8.0
+offset_right = 1193.0
+offset_bottom = 675.0
+theme_override_fonts/font = ExtResource("1_cumwy")
+theme_override_font_sizes/font_size = 40
+text = "WASD or Arrow Keys to move. You can also jump with SPACE BAR!
+
+Sacrifice using R or ENTER KEY.
+
+Reach the flag at the end of the level with 10 coins to move on!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 264.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.6862745, 0.6862745, 0.6862745, 1)
+theme_override_fonts/font = ExtResource("1_cumwy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_egcxk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kjkcy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jim11")
+text = "Exit"
+script = ExtResource("2_egcxk")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
