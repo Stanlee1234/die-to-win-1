@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfe4v7k2chlcs"]
+[gd_scene load_steps=16 format=3 uid="uid://cfe4v7k2chlcs"]
 
 [ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="1_puqh6"]
 [ext_resource type="Texture2D" uid="uid://crhrjx0mcv7dw" path="res://assets/sprites/Dungeon Tile Set.png" id="2_e3446"]
 [ext_resource type="Texture2D" uid="uid://d0q2g65ahgok" path="res://assets/sprites/world_tileset.png" id="3_n8f5r"]
-[ext_resource type="Script" uid="uid://dxuf40asaxghr" path="res://scripts/game_manager.gd" id="4_vog1i"]
 [ext_resource type="PackedScene" uid="uid://dqnaqj8yb6hwd" path="res://scenes/player.tscn" id="5_lrh30"]
 [ext_resource type="PackedScene" uid="uid://dtrbka1ef726o" path="res://scenes/killzone.tscn" id="6_4ibef"]
 [ext_resource type="PackedScene" uid="uid://pqp5qaw561fr" path="res://scenes/coin.tscn" id="7_luw6t"]
@@ -314,10 +313,6 @@ fill_from = Vector2(0.5106838, 0.52991456)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cn5tm"]
 
 [node name="Game" type="Node2D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("4_vog1i")
 
 [node name="Labels" type="Node" parent="."]
 

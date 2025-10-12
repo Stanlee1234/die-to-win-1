@@ -2,15 +2,19 @@ extends Area2D
 
 @onready var timer = $Timer
 @onready var animation = $AnimationPlayer
-@onready var game_manager = %GameManager
 
+var player = null
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		animation.play("PlayDeath")
-		timer.start()
+		player = body
+		if GameManager.health > 1:
+			GameManager.take_damage(player)
+		else:
+			timer.start()
+			animation.play("PlayDeath")
 
 
 func _on_timer_timeout():
 	Engine.time_scale = 1.0
-	game_manager.take_damage()
+	GameManager.take_damage(player)

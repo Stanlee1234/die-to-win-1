@@ -19,6 +19,7 @@ run/layer_17=""
 
 AudioPlayer="*res://scenes/audio_player.tscn"
 LoadManager="*res://Autoloads/LoadManager.gd"
+GameManager="*res://scripts/game_manager.gd"
 
 [display]
 

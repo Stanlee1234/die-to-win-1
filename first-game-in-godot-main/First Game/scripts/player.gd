@@ -13,7 +13,6 @@ var is_sacrifice = false
 var spawnpoint = Vector2(self.position.x, self.position.y)
 
 @onready var timer = $Timer
-@onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation = $AnimationPlayer
 
@@ -76,7 +75,7 @@ func create_duplicate_sprite():
 	add_sibling(corpse)
 	corpse.position = Vector2(self.position.x, self.position.y)
 	corpse.name = "corpse" + str(corpse_counter)	
-	game_manager.add_corpse_count()
+	GameManager.add_corpse_count()
 	reset_position()
 	
 	
