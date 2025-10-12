@@ -48,6 +48,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -8.0
+offset_right = 2.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_640wx")
@@ -55,8 +59,7 @@ coin_label = NodePath("CoinTexture/CoinLabel")
 corpse_count_label = NodePath("CorpseTexture/CorpseCountLabel")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(144, 149)
+position = Vector2(77, 136.00002)
 scale = Vector2(2.78, 2.78)
 sprite_frames = SubResource("SpriteFrames_0i1j5")
 autoplay = "default"

@@ -77,8 +77,7 @@ func create_duplicate_sprite():
 	corpse.position = Vector2(self.position.x, self.position.y)
 	corpse.name = "corpse" + str(corpse_counter)	
 	game_manager.add_corpse_count()
-	self.position = spawnpoint
-	self.velocity = Vector2(0,0)
+	reset_position()
 	
 	
 func process_sacrifice():
@@ -89,3 +88,7 @@ func process_sacrifice():
 		
 func _on_body_entered(body: Node2D):
 	print(body.name)
+
+func reset_position():
+	self.position = spawnpoint
+	self.velocity = Vector2(0,0)

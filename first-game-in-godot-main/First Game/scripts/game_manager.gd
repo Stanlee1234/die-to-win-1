@@ -1,9 +1,12 @@
 extends Node
 
+@onready var player = get_node("../Player")
+
 var coins = 0
 var corpse = 0
 var hud = HUD
 var current_area = 1
+var health = 3
 var area_path = "res://Area/"
 
 func _ready():
@@ -25,3 +28,11 @@ func player_touching_flag():
 			var path = "res://Area/level_" + str(current_area) + ".tscn"
 			get_tree().change_scene_to_file(path)
 			print("change level to level " + str(current_area) )
+
+func take_damage():
+	if health > 1:
+		health -= 1
+		player.reset_position()
+	else:
+		get_tree().reload_current_scene()
+		player.get_node("CollisionShape2D").queue_free()
