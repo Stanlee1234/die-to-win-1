@@ -23,5 +23,5 @@ func player_touching_flag():
 	if coins == 10:
 			current_area += 1
 			var path = "res://Area/level_" + str(current_area) + ".tscn"
-			LoadManager.load_scene(path)
+			get_tree().change_scene_to_file(path)
 			print("change level to level " + str(current_area) )
