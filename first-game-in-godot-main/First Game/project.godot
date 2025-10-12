@@ -19,7 +19,6 @@ run/layer_17=""
 
 AudioPlayer="*res://scenes/audio_player.tscn"
 LoadManager="*res://Autoloads/LoadManager.gd"
-Hud="*res://scenes/hud.tscn"
 
 [display]
 

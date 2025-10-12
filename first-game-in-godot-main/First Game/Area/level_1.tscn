@@ -459,6 +459,7 @@ position = Vector2(279, 112)
 position = Vector2(345, 110)
 
 [node name="Flag" parent="." instance=ExtResource("10_v88g3")]
+unique_name_in_owner = true
 position = Vector2(567, 48)
 
 [editable path="Player"]

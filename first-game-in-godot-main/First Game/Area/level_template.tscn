@@ -411,39 +411,39 @@ shape = SubResource("WorldBoundaryShape2D_cn5tm")
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(180, -79)
+position = Vector2(59, 30)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(190, -66)
+position = Vector2(52, 28)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(191, -65)
+position = Vector2(62, 41)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(147, -76)
+position = Vector2(58, 27)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(127, -67)
+position = Vector2(51, 41)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(158, -65)
+position = Vector2(53, 22)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(190, -57)
+position = Vector2(44, 38)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(179, -56)
+position = Vector2(-38, 40)
 
 [node name="Coin9" parent="Coins" instance=ExtResource("7_luw6t")]
 position = Vector2(61, 42)
 
 [node name="Coin10" parent="Coins" instance=ExtResource("7_luw6t")]
-position = Vector2(152, -54)
+position = Vector2(58, 30)
 
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Slime1" parent="." instance=ExtResource("8_qjwxh")]
-position = Vector2(7, 48)
+position = Vector2(-16, 91)
 
 [node name="Robot" parent="." instance=ExtResource("9_uaqlt")]
 position = Vector2(230, -85)
