@@ -4,13 +4,16 @@ class_name Player
 
 
 const SPEED = 90.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -260.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var corpse_counter = 0
 var is_sacrifice = false
 var spawnpoint = Vector2(self.position.x, self.position.y)
+var jump_timer = 0.0
+var was_on_floor = false
+var can_jump_anyway = false
 
 @onready var timer = $Timer
 @onready var animated_sprite = $AnimatedSprite2D
@@ -22,10 +25,19 @@ func _physics_process(delta):
 		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+		
+	if Input.is_action_just_pressed("jump"):
+		jump_timer = 0.1
+	jump_timer -= delta
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if was_on_floor and is_on_floor():
+		$CoyoteTimer.start(0.1)
+		can_jump_anyway = true
+	if jump_timer > 0 and (is_on_floor() or can_jump_anyway):
 		velocity.y = JUMP_VELOCITY
+		was_on_floor = false
+	else:
+		was_on_floor = true
 	if Input.is_action_just_pressed("reset"):
 		Engine.time_scale = 1.0
 		get_tree().reload_current_scene()
@@ -91,4 +103,6 @@ func _on_body_entered(body: Node2D):
 func reset_position():
 	self.position = spawnpoint
 	self.velocity = Vector2(0,0)
-	
+
+func _on_coyote_timer_timeout() -> void:
+	can_jump_anyway = false
